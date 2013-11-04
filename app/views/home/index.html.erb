@@ -6,6 +6,6 @@
   <p><%= t('activerecord.attributes.user.birth_date') %>: <%= @user.birth_date %></p>
   <p><%= t('activerecord.attributes.user.address') %>: <%= @user.address %></p>
   <p><%= t('activerecord.attributes.user.mobile_phone') %>: <%= @user.mobile_phone %></p>
-  <p><%= t('activerecord.attributes.user.profile_photo') %>: <%#= @user.profile_photo %></p>
+  <p><%= t('activerecord.attributes.user.profile_photo') %>: <%= image_tag @user.facebook_photo_url %></p>
 
 <% end %>

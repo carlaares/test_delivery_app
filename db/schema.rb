@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20131104142539) do
     t.string   "uid"
     t.string   "name"
     t.string   "last_name"
+    t.string   "facebook_photo_url"
     t.date     "birth_date"
     t.string   "mobile_phone"
     t.string   "address"

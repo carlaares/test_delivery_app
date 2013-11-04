@@ -25,16 +25,16 @@ class User < ActiveRecord::Base
     end
   end
   
-
   def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
     user = User.where(:provider => auth.provider, :uid => auth.uid).first
-      logger.info auth.extra.raw_info.inspect
+    logger.info auth.inspect
     if user
       user.name = auth.extra.raw_info.first_name
       user.last_name = auth.extra.raw_info.last_name
       user.email = auth.info.email
       user.birth_date = auth.extra.raw_info.birthday
       user.mobile_phone = nil
+      user.facebook_photo_url = auth.info.image
       user.address = auth.extra.raw_info.location.name
       user.save
     else
@@ -45,6 +45,7 @@ class User < ActiveRecord::Base
         email: auth.info.email,
         birht_date: auth.extra.raw_info.birthday,
         #mobile_phone: ,
+        facebook_photo_url: auth.info.image,
         address: auth.extra.raw_info.location.name,
         password:Devise.friendly_token[0,20])
       user.skip_confirmation!
