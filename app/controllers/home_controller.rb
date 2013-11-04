@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
+  # before_filter :authenticate_user!, except: [ :index, :videos ]
   def index
-    @users = User.all
+    @user = current_user
   end
 end

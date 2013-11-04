@@ -3,3 +3,7 @@ es:
     user: Usuario
     password: Contraseña
     remember_me: Recordarme
+    validation_status_0: 'Falta validar datos'
+    validation_status_1: 'Validación de email y facebook'
+    validation_status_2: 'Validación de teléfono completa'
+    validation_status_3: 'Verificación máxima alcanzada'
