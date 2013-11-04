@@ -9,4 +9,5 @@ Delivery::Application.routes.draw do
       post :validate_id_image
     end
   end
+  match '/delivery' => 'delivery#zone', :via => [:get, :post]
 end

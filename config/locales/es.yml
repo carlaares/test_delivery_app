@@ -16,6 +16,7 @@ es:
     reach_next_validation_level: Seguí los siguientes pasos para alcanzar el siguiente paso de validación
     will_send_sms:  te enviará un SMS para validar su número de teléfono
     validate_id_image: 'Subí la foto o el scan de tu DNI o Cédula de Identidad. Validaremos en forma offline si sos quien dice ser. Con esto alcanzarás el máximo nivel de validación y los clientes confiarán mucho más en vos'
+    delivery_zone: Zona de delivery
   button:
     send_sms: Enviar SMS
     validate_code: Validate code

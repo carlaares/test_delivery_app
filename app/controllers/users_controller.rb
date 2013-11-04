@@ -16,7 +16,6 @@ class UsersController < ApplicationController
       user.save
       flash.now[:notice] = "SMS enviado"
     else
-raise "asd"
       flash.now[:error] = user.errors.messages.to_s
     end
     current_user.reload
