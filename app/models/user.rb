@@ -43,13 +43,12 @@ class User < ActiveRecord::Base
         provider: auth.provider,
         uid: auth.uid,
         email: auth.info.email,
-        birht_date: auth.extra.raw_info.birthday,
-        #mobile_phone: ,
+        birth_date: auth.extra.raw_info.birthday,
+        mobile_phone: nil,
         facebook_photo_url: auth.info.image,
         address: auth.extra.raw_info.location.name,
         password:Devise.friendly_token[0,20])
       user.skip_confirmation!
-      user.validation_status = 1
       user.save
     end
     if not user.mobile_phone.nil? and user.validation_status < 2

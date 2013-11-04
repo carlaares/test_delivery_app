@@ -13,7 +13,8 @@
 <div class="collapse navbar-collapse navbar-ex1-collapse">
   <ul class="nav navbar-nav">
     <% if user_signed_in? %>
-      <li><%= link_to 'Configure deliver', "#" %></li>
+      <li><%= link_to t('menu.configure_delivery'), "#" %></li>
+      <li><%= link_to t('menu.validate_your_data'), user_validate_your_data_path(current_user) %></li>
     <% end %>
   </ul>
 

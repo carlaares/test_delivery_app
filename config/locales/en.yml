@@ -25,7 +25,18 @@ en:
     user: Username
     password: Password
     remember_me: Remmeber me
-    validation_status_0: 'Falta validar datos'
-    validation_status_1: 'Validación de email y facebook'
-    validation_status_2: 'Validación de teléfono completa'
-    validation_status_3: 'Verificación máxima alcanzada'
+    validation_status_0: Basic data is missing
+    validation_status_1: 'Basic: Email and facebook validated'
+    validation_status_2: 'Advanced: Mobile phone validated'
+    validation_status_3: 'Maximum: ID verification done'
+  menu:
+    validate_your_data: Validate your identity
+    configure_delivery: Configure delivery zone
+  text:
+    max_validalidation_level: You have reach the max level of validation. There is nothing else to do.
+    your_validation_level_is: 'Your validation level is:'
+    reach_next_validation_level: Follow this steps in order to complete the validation process
+    will_send_sms:  we will send you an SMS with a validation code
+  button:
+    send_sms: Send SMS
+

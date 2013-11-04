@@ -4,6 +4,17 @@ es:
     password: Contraseña
     remember_me: Recordarme
     validation_status_0: 'Falta validar datos'
-    validation_status_1: 'Validación de email y facebook'
-    validation_status_2: 'Validación de teléfono completa'
-    validation_status_3: 'Verificación máxima alcanzada'
+    validation_status_1: 'Básica: Validación de email y facebook'
+    validation_status_2: 'Avanzada: Validación de teléfono completa'
+    validation_status_3: 'Máxima: Verificación máxima alcanzada'
+  menu:
+    validate_your_data: Valida tu identidad
+    configure_delivery: Configurá la zona de delivery
+  text:
+    max_validalidation_level: Haz alcanzado el nivel máximo de validación
+    your_validation_level_is: 'Tu nivel de validación es:'
+    reach_next_validation_level: Seguí los siguientes pasos para alcanzar el siguiente paso de validación
+    will_send_sms:  te enviará un SMS para validar su número de teléfono
+  button:
+    send_sms: Enviar SMS
+

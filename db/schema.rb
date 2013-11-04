@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 20131104142539) do
     t.string   "mobile_phone"
     t.string   "address"
     t.integer  "validation_status",      default: 0
+    t.string   "mobile_phone_code"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
