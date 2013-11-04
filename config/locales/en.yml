@@ -21,3 +21,7 @@
 
 en:
   hello: "Hello world"
+  label:
+    user: Username
+    password: Password
+    remember_me: Remmeber me

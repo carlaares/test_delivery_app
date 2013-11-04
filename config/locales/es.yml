@@ -1,0 +1,5 @@
+es:
+  label:
+    user: Usuario
+    password: Contraseña
+    remember_me: Recordarme

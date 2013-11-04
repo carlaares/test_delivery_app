@@ -9,6 +9,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'bootstrap-sass', '>= 3.0.0.0'
 gem 'devise'
+gem 'devise-i18n-views'
 gem 'figaro'
 gem 'mysql2'
 group :development do
