@@ -15,6 +15,17 @@ es:
     your_validation_level_is: 'Tu nivel de validación es:'
     reach_next_validation_level: Seguí los siguientes pasos para alcanzar el siguiente paso de validación
     will_send_sms:  te enviará un SMS para validar su número de teléfono
+    validate_id_image: 'Subí la foto o el scan de tu DNI o Cédula de Identidad. Validaremos en forma offline si sos quien dice ser. Con esto alcanzarás el máximo nivel de validación y los clientes confiarán mucho más en vos'
   button:
     send_sms: Enviar SMS
+    validate_code: Validate code
+    upload_id: Subir DNI
+  activerecord:
+    attributes:
+      user:
+        name: Nombre
+        last_name: Apellido
+        email: Email
+        id_scan: Scan de DNI
+        birth_date: Cumpleaños
 

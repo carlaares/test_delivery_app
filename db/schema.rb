@@ -40,6 +40,10 @@ ActiveRecord::Schema.define(version: 20131104142539) do
     t.string   "address"
     t.integer  "validation_status",      default: 0
     t.string   "mobile_phone_code"
+    t.string   "id_scan_file_name"
+    t.string   "id_scan_content_type"
+    t.integer  "id_scan_file_size"
+    t.datetime "id_scan_updated_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

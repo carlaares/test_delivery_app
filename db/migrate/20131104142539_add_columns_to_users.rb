@@ -10,5 +10,6 @@ class AddColumnsToUsers < ActiveRecord::Migration
     add_column :users, :address, :string
     add_column :users, :validation_status, :integer, :default => 0
     add_column :users, :mobile_phone_code, :string
+    add_attachment :users, :id_scan
   end
 end

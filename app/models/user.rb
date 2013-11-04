@@ -5,9 +5,13 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:facebook]
 
   #attr_accessible :provider, :uid, :name
+  phony_normalize :mobile_phone
+  validates :mobile_phone, :phony_plausible => true
 
   # FIX-ME we could use state machine
   VALIDATION_STATUS = { '0' => 'none', '1' => 'basic', '2' => 'advanced', '3' => 'maximum'  }
+
+  has_attached_file :id_scan
 
   after_save :set_validation_status
 

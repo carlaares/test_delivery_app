@@ -37,6 +37,9 @@ en:
     your_validation_level_is: 'Your validation level is:'
     reach_next_validation_level: Follow this steps in order to complete the validation process
     will_send_sms:  we will send you an SMS with a validation code
+    validate_id_image: 'Subí la foto o el scan de tu DNI o Cédula de Identidad. Validaremos en forma offline si sos quien dice ser. Con esto alcanzarás el máximo nivel de validación y los clientes confiarán mucho más en vos'
   button:
     send_sms: Send SMS
+    validate_code: Validate code
+    upload_id: Upload ID
 
