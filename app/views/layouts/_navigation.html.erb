@@ -14,7 +14,7 @@
   <ul class="nav navbar-nav">
     <% if user_signed_in? %>
       <li><%= link_to t('menu.configure_delivery'), "#" %></li>
-      <li><%= link_to t('menu.validate_your_data'), user_validate_your_data_path(current_user) %></li>
+      <li><%= link_to t('menu.validate_your_data'), validate_your_data_users_path %></li>
     <% end %>
   </ul>
 

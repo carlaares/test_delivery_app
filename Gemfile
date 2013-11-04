@@ -25,6 +25,4 @@ end
 gem 'omniauth'
 gem 'omniauth-facebook'
 
-gem 'phony_rails'
-
 gem "paperclip", "~> 3.0"
