@@ -7,8 +7,7 @@
   <% if current_user.validation_status == 1 %>
     <p><%= t('text.reach_next_validation_level') %></p>
 
-    <% unless current_user.mobile_phone_code.empty? %>
-
+    <% unless current_user.mobile_phone_code.blank? %>
       <small>Code: <%= current_user.mobile_phone_code %></small>
 
       <%= form_for(current_user, url: validate_mobile_phone_users_path, class: 'form-horizontal', role: 'form', method: 'post') do |f|  %>

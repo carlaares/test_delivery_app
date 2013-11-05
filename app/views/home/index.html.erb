@@ -1,7 +1,7 @@
 <% if user_signed_in? %>
   <h3>Home</h3>
-  <p><%= t('activerecord.attributes.user.name') %>: <%=link_to @user.name, @user %></p>
   <p>Validation type: <%= I18n.t('label.validation_status_'+@user.validation_status.to_s) %></p>
+  <p><%= t('activerecord.attributes.user.name') %>: <%= @user.name %></p>
   <p><%= t('activerecord.attributes.user.last_name') %>: <%= @user.last_name %></p>
   <p><%= t('activerecord.attributes.user.birth_date') %>: <%= @user.birth_date %></p>
   <p><%= t('activerecord.attributes.user.address') %>: <%= @user.address %></p>

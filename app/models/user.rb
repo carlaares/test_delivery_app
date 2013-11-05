@@ -5,7 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:facebook]
 
   #attr_accessible :provider, :uid, :name
-  validates :mobile_phone, :numericality => { :only_integer => true, :greater_than => 100000 }
+  validates :mobile_phone, :numericality => { :only_integer => true, :greater_than => 100000 }, :if => :validate_mobile_phone
+  validates :last_name, :presence => true, :on => :create
 
   # FIX-ME we could use state machine
   VALIDATION_STATUS = { '0' => 'none', '1' => 'basic', '2' => 'advanced', '3' => 'maximum'  }
@@ -13,6 +14,14 @@ class User < ActiveRecord::Base
   has_attached_file :id_scan
 
   after_save :set_validation_status
+
+  def validate_mobile_phone!
+    @validate_mobile_phone = true
+  end
+
+  def validate_mobile_phone
+    @validate_mobile_phone
+  end
 
   def set_validation_status
     if self.confirmed? and validation_status == 0

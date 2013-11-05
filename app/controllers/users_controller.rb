@@ -10,6 +10,7 @@ class UsersController < ApplicationController
 
   def send_sms
     user = User.find current_user.id
+    user.validate_mobile_phone!
     user.mobile_phone = params.require(:user).permit(:mobile_phone)[:mobile_phone]
     if user.valid?
       user.mobile_phone_code = SecureRandom.hex(5)
