@@ -11,15 +11,19 @@ gem 'bootstrap-sass', '>= 3.0.0.0'
 gem 'devise'
 gem 'devise-i18n-views'
 gem 'figaro'
-gem 'mysql2'
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
   gem 'quiet_assets'
   gem 'rails_layout'
+  gem 'mysql2'
 end
+
 group :production do
-  gem 'unicorn'
+  # gem 'unicorn'
+  gem 'rails_12factor'
+  gem 'pg'
 end
 
 gem 'omniauth'
