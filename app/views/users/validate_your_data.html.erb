@@ -14,16 +14,16 @@
         <%= t('text.complete_code') %>
         <br>
         <label><%= t('activerecord.attributes.user.mobile_phone_code') %></label>
-        <%= text_field_tag :mobile_phone_code_received %>
-        <%= f.submit t('button.validate_code'), class: 'btn' %>
+        <%= text_field_tag :mobile_phone_code_received, nil, class: 'form-control' %>
+        <%= f.submit t('button.validate_code'), class: 'btn btn-success' %>
       <% end %>
     <% else %>
       <%= form_for(current_user, url: send_sms_users_path, class: 'form-horizontal', role: 'form', method: 'post') do |f|  %>
         <%= t('text.will_send_sms') %>
         <br>
         <label><%= t('activerecord.attributes.user.mobile_phone') %></label>
-        <%= f.telephone_field :mobile_phone %>
-        <%= f.submit t('button.send_sms'), class: 'btn' %>
+        <%= f.telephone_field :mobile_phone, class: 'form-control' %>
+        <%= f.submit t('button.send_sms'), class: 'btn btn-success' %>
       <% end %>
     <% end %>
 

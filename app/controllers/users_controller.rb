@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     user.validate_mobile_phone!
     user.mobile_phone = params.require(:user).permit(:mobile_phone)[:mobile_phone]
     if user.valid?
-      user.mobile_phone_code = SecureRandom.hex(5)
+      user.mobile_phone_code = SecureRandom.hex(5)[0..4]
       user.save
       flash.now[:notice] = "SMS enviado"
     else
