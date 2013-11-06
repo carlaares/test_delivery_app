@@ -27,6 +27,11 @@
         <%= f.password_field :password, :class => "form-control", :placeholder => t('label.password') %>
       </div>
       <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-lock"></span>&nbsp;<%= t('buttons.login') %></button> 
+
+      <%- User.omniauth_providers.each do |provider| %>
+      <%= link_to t('.sign_in_with_provider', :provider => provider.to_s.titleize, :default => "Sign in with #{provider.to_s.titleize}"), omniauth_authorize_path('user', provider), :class => "btn btn-info" %><br />
+      <% end -%>
+
     <% end %>
   <% end %>
     

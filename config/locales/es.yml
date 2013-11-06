@@ -29,4 +29,6 @@ es:
         email: Email
         id_scan: Scan de DNI
         birth_date: Cumpleaños
+        address: Dirección
+        mobile_phone: Celular
 
