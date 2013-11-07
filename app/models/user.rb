@@ -41,25 +41,25 @@ class User < ActiveRecord::Base
     user = User.where(:provider => auth.provider, :uid => auth.uid).first
     logger.info auth.inspect
     if user
-      user.name = auth.extra.raw_info.first_name
-      user.last_name = auth.extra.raw_info.last_name
+      user.name = (auth.extra.raw_info.first_name rescue nil)
+      user.last_name = (auth.extra.raw_info.last_name rescue nil)
       user.email = auth.info.email
-      user.birth_date = auth.extra.raw_info.birthday
+      user.birth_date = (auth.extra.raw_info.birthday rescue nil)
       user.mobile_phone = nil
       user.facebook_photo_url = auth.info.image
-      user.address = auth.extra.raw_info.location.name
+      user.address = (auth.extra.raw_info.location.name rescue nil) 
       user.save
     else
-      user = User.new(name: auth.extra.raw_info.first_name,
-        last_name: auth.extra.raw_info.last_name,
+      user = User.new(name: (auth.extra.raw_info.first_name rescue nil),
+        last_name: (auth.extra.raw_info.last_name rescue nil),
         provider: auth.provider,
         uid: auth.uid,
         email: auth.info.email,
-        birth_date: auth.extra.raw_info.birthday,
+        birth_date: (auth.extra.raw_info.birthday rescue nil),
         mobile_phone: nil,
         facebook_photo_url: auth.info.image,
-        address: auth.extra.raw_info.location.name,
-        password:Devise.friendly_token[0,20])
+        address: (auth.extra.raw_info.location.name rescue nil),
+        password: Devise.friendly_token[0,20])
       user.skip_confirmation!
       user.save
     end
