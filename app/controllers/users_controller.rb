@@ -40,12 +40,12 @@ class UsersController < ApplicationController
   def validate_id_image
     user = User.find current_user.id
     if user.update_attributes params.require(:user).permit(:id_scan)
-      flash.now[:notice] = "Una vez confirmado tu ID habrás recibido la validación máxima."
+      flash[:notice] = "La imagen se subió correctamente. Una vez confirmado tu ID habrás recibido la validación máxima."
     else
-      flash.now[:error] = "Hubo un error al subir la imagen"
+      flash[:error] = "Hubo un error al subir la imagen"
     end
     current_user.reload
-    render :validate_your_data
+    redirect_to root_url
   end
 
 end
